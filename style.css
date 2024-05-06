@@ -1,0 +1,216 @@
+/* Criação de variável em CSS */
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #c0c0c0;    
+    --botao-azul:       #167bf7;
+    --cor-de-fundo:     #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+
+} 
+
+body{
+
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+/*Tira a margem de todos os elementos*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url("img/Background.png" );
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+
+}
+
+.container{
+    /* vh = viewport height, no 100 vai ocupar 100% da tela */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container_botao{
+
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    /*EM medida relativa ao tamanho da fonte, se fonte 16 padding 16*/
+    padding : 1em;
+    color:  var(--branco-principal);
+    display: block;
+    /*Tirar o sublinhado de links*/
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.botao_secundario{
+
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
+    
+}
+
+.container_aviso{
+
+    font-size: 12px;
+    color:var(--cinza-secundario)
+
+}
+
+.container_titulo{
+
+    font-size: 28px;
+    
+}
+
+.container_imagem{
+    /*Funciona igual relógio cima, direita, baixo, esquerda*/
+    margin: 1em 0 2em 0;
+
+}
+
+.container_caixa{
+ /*margin cria espaço ao redor do elemento e padding cria espaço dentro do elemento, um botão com padding fica maior, 
+ já com margin fica mais distante do elemento ao lado*/
+    margin: 0 6em;
+}
+
+.secundario__imagem{
+
+    width:  80%;
+
+}
+
+.secundario{
+
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo{
+
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin: 0.1em;
+
+}
+
+.descricao__texto{
+    color:var(--cinza-secundario)
+}
+
+.secundario__botao{
+
+    display: inline-block;
+    margin-top: 1em;
+}
+
+
+.container__descricao{
+
+    padding: 2em;
+}
+
+.container_tres{
+text-align: center;
+display: grid;
+grid-template-columns: 30 30 30;
+}
+
+.terciario__imagem{
+
+    width: 20em;
+}
+
+.dispositivos__lista{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /*Tira o pontinho das listas*/
+    list-style-type:none;
+    margin: 3em 0;
+}
+
+.dispositivos__titulo{
+
+    font-size: 48;
+    text-align: center;
+    color: var(--branco-principal)
+}
+
+.lista__item{
+
+    font-size: 32;
+    color: var(--branco-principal)
+}
+
+
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+
+    /*Tira o pontinho das listas*/
+    list-style-type:none;
+    margin-top: 1em;
+
+}
+
+
+.lista__link a{
+
+    text-decoration: none;
+    color: var(--branco-principal);
+
+}
+.lista__link{
+    margin: 0 0.5em;
+    padding: 0.3em;
+    color: var(--branco-principal);
+}
+
+.rodape__texto{
+    text-align: center;
+    margin: 1em;
+    color: var(--cinza-secundario);
+}
+
+.rodape{
+    
+    text-align: center;
+    margin: 5em 3em;
+}
+
+
+/* Da efeito de mudar a cor quando passa o mouse em cima*/
+.lista__link a:hover{
+    color: var(--botao-azul)
+}
+/*Muda a cor quando clica e segura o mouse em cima*/
+.lista__link a:active{
+    color:purple;
+}
+
+.container_botao:hover{
+
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
+}
+
+.botao_secundario:hover{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    color:  var(--branco-principal);
+}
